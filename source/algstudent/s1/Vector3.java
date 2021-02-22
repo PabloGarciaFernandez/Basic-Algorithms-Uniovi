@@ -4,7 +4,7 @@ public class Vector3 {
 	
 	public static void main(String args[]) {
 		int n = Integer.parseInt(args[0]);
-		int[] v = new int[n*5];
+		int[] v = new int[n*5]; 
 		Vector1.fillIn(v);
 		
 		long sTime = System.currentTimeMillis();
