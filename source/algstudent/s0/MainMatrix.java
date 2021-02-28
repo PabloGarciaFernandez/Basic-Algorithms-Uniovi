@@ -1,6 +1,6 @@
 package algstudent.s0;
 
-import algstudent.s1.Vector1;
+import algstudent.s11.Vector1;
 
 public class MainMatrix {
 	

@@ -9,7 +9,7 @@ Java classes are stored in files with the same as the class,
 Packages must be in a directory path with the same name, that is,
 package alg77777777.s1 should be in the directory alg77777777/s1.
 */
-package algstudent.s1;
+package algstudent.s11;
 
 /**
  * This program is for working with vectors and see how Java programs work
