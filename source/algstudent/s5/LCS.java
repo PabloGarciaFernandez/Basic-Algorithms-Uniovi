@@ -162,12 +162,26 @@ public class LCS {
 	 * @param v if True verbose mode activated (To show the path trough the different cells)
 	 */
 	public void findLongestSubseq(boolean v){
-		int initValue = 0;
-		for(int j=0 ; j<str1.length()-1; j++) {
-			if(table[j][str2.length()-1].value != initValue) {
-				result += str1.charAt(j);
-				initValue++;
+//		int initValue = 0;
+//		for(int j=0 ; j<str1.length()-1; j++) {
+//			if(table[j][str2.length()-1].value != initValue) {
+//				result += str1.charAt(j);
+//				initValue++;
+//			}
+//		}
+		int i = size1 - 1; 
+		int j = size2 - 1;
+		
+		CellTable currentCell = table[i][j];
+		int length = currentCell.value; 		
+		while(length > 0 && i >= 0) {
+			if(currentCell.value > table[currentCell.iPrev][currentCell.jPrev].value) { 
+				result = str1.charAt(i) + result;
+				length--; 
 			}
+			i = currentCell.iPrev; 
+			j = currentCell.jPrev;
+			currentCell = table[currentCell.iPrev][currentCell.jPrev]; 
 		}
 	}
 
